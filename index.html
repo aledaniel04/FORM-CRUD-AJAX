@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Formulario Dane</h1>
+        <button class="btn" id="agregar">Agregar</button>
+        <label for="caja_busqueda"><h1 class="buscar">Buscar:</h1></label>
+        <input class="input-estilo" id="caja_busqueda" name="caja_busqueda" type="text">
+    </div>
+    <div>
+        <table class="tablaPrincipal" id="tableList">
+            <tr class="primaraFila">
+                <td>Id</td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Cedula</td>
+                <td>Correo</td>
+                <td>Edad</td>
+                <td>Nacimiento</td>
+                <td>Ayuda Social</td>
+                <td>Genero</td>
+                <td>Hora</td>
+                <td>Clase Social</td>
+                <td>Opciones</td>
+            </tr>
+            <tbody id="registroDane" class="demasFila">
+
+            </tbody>
+        </table>
+    </div>
+    <div id="popupEliminar" class="fondo-transparente">
+        <div class="contenedor-hijo">
+            <div>
+                <h1>¿Estas seguro de que quieres eliminar el registro de <span id="nombreEliminar"></span>?</h1>
+            </div>
+            <div class="botonesElimanacion">
+                <button class="btn" id="eliminarFila">Eliminar</button> <button class="btn" id="cancelarEliminacion">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div id="popup" class="fondo-transparente">
+        <div class="container-padre">
+            <div class="encabezado">
+                <h1 class="texto-aliniar">Encuesta Dane</h1>
+                <p>Con estas encuesta se busca recolectar información que permita determinar y caracterizar las condiciones de vida de la población del país</p>
+            </div>
+            <form class="formulario" id="formulario">
+                <label for="nombre">Nombre</label>
+                <input class="input-estilo" type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre" required="">
+
+                <label for="apellido">Apellido</label>
+                <input class="input-estilo" type="text" name="apellido" id="apellido" placeholder="Introduce tu apellido" required="">
+
+                <label for="cedula">Cedula</label>
+                <input class="input-estilo" type="number" name="cedula" id="cedula" placeholder="Introduce tu cedula" required="">
+                
+                <label for="correo">Email</label> 
+                <input class="input-estilo" type="email" name="correo" id="correo" placeholder="Introduce tu correo" required="@">
+    
+                <label for="edad">Edad</label>
+                <input class="input-estilo" type="number" name="edad" id="edad" placeholder="Intruce tu edad">
+
+                <label for="fecha">fecha de nacimiento</label>
+                <input class="input-estilo" type="date" name="fecha" id="fecha">
+
+                <label for="ayuda">recibe una ayuda social</label>
+                <div>
+                    <input type="checkbox" class="opciones" value="verdadero">
+                    <label for="verdadero">verdadero</label> <br>
+                    <input type="checkbox" class="opciones" value="falso">
+                    <label for="falso">falso</label> <br>
+                </div>
+
+                <label>identifica tu genero</label>
+                <div>
+                <input type="radio" name="genero" value="hombre" class="genero">
+                <label for="hombre">Hombre</label><br>
+                <input type="radio" name="genero" value="mujer" class="genero">
+                <label for="mujer">mujer</label><br>
+                <input type="radio" name="genero" value="otros" class="genero">
+                <label for="otros">otros</label><br>
+                </div>
+
+                <label for="hora">indica la hora</label>
+                <input class="input-estilo" type="time" name="hora" id="hora">
+
+                <label for="clase">Clase social</label>
+                <select class="input-estilo" name="clase" id="clase">
+                <option value="alta">Alta</option>
+                <option value="media">Media</option>
+                <option value="pobre">Pobre</option>
+                </select>
+
+                <div class="boton-enviar">
+                    <button type="submit" class="btn">Enviar</button>
+                    <button type="reset" class="btn" id="regresar">Regresar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
